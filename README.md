@@ -5,7 +5,7 @@ Step 2:
 Add json to android -> app -> directory.
 
 Step 3:
-Add "firebase_core" + "firebase_messaging" + "flutter local notification" on pubspec.ymal & import packages.
+Add "firebase_core" , "firebase_messaging" & "flutter local notification" on pubspec.ymal & import packages.
 
 Step 4:
 Add this code on main.dart and Override your nessecery things.
