@@ -1,17 +1,22 @@
-Step 01:
+Step 1:
 Create Firebase Project.
 
 Step 2:
 Add json to android -> app -> directory.
 
 Step 3:
-Add "firebase_core" + "firebase_messaging" + "flutter local notification" on pubspec.ymal & import packages on project's main.dart
+Add "firebase_core" + "firebase_messaging" + "flutter local notification" on pubspec.ymal & import packages.
 
 Step 4:
-Add this code on main.dart.
-after import.
+Add this code on main.dart and Override your nessecery things.
 
 
+```
+import 'package:flutter/material.dart';
+import 'package:dhakarchaka/pages/NextScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
     'high_importance_channel', // id
@@ -48,13 +53,12 @@ Future<void> main() async {
   runApp(MyApp());
 }
 
-
 class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
-class _MyApp extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
 
   int _counter = 0;
 
@@ -126,10 +130,9 @@ class _MyApp extends State<MyApp> {
 
     return
       MaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: 'My App',,
-              home: SplashScreen()
+              home: NextScreen()
 
     );
   }
 }
+```
